@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorites | MediWise</title>
+  <meta name="description" content="Save and review favorite medicines with MediWise. Manage saved medicine profiles and recently viewed entries." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Loading your saved medicines...</div>
+  </div>
+  <div class="page-shell">
+    <header class="site-header" id="siteHeader">
+      <div class="brand-group">
+        <a class="brand-logo" href="index.html">Medi<span>Wise</span></a>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="medicine.html">Medicines</a></li>
+          <li><a href="disease.html">Diseases</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medicine.html">Medicines</a></li>
+        <li><a href="disease.html">Diseases</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section class="section favorites-hero glass-panel animate-up">
+        <div>
+          <span class="eyebrow">Favorites</span>
+          <h1>Saved medicine profiles for easy reference.</h1>
+          <p>Your favorite medicines and recent views are stored locally so you can return to them anytime.</p>
+        </div>
+        <div class="favorites-count">
+          <span id="favoritesCount">0</span>
+          <p>Medicines saved</p>
+        </div>
+      </section>
+
+      <section class="section section-surface" aria-labelledby="favoriteListTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Your library</span>
+            <h2 id="favoriteListTitle">Favorite medicine summaries and quick actions.</h2>
+          </div>
+          <button type="button" id="clearFavoritesButton" class="btn btn-secondary">Clear favorites</button>
+        </div>
+        <div class="card-grid" id="favoriteList"></div>
+        <div class="empty-state" id="favoritesEmpty" hidden>
+          <h3>No favorites yet</h3>
+          <p>Search for medicines and tap the heart icon to save profiles to your collection.</p>
+        </div>
+      </section>
+
+      <section class="section section-gradient history-panel glass-panel animate-up" aria-labelledby="recentlyViewedTitle">
+        <div>
+          <span class="eyebrow">Recently viewed</span>
+          <h2 id="recentlyViewedTitle">Revisit the medicines you explored recently.</h2>
+          <div class="history-grid" id="recentlyViewedList"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <a class="brand-logo footer-logo" href="index.html">Medi<span>Wise</span></a>
+          <p>Premium medicine discovery built for people who care.</p>
+        </div>
+        <div>
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="medicine.html">Medications</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 MediWise. Use information responsibly and consult a healthcare professional for medical advice.</p>
+      </div>
+    </footer>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+  <script src="js/site.js"></script>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/favorites.js"></script>
+</body>
+</html>

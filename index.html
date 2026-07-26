@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediWise | Premium Healthcare Search & Medicine Insights</title>
+  <meta name="description" content="MediWise is a premium healthcare discovery experience for searching medicines, exploring conditions, and comparing treatments with intelligent recommendations." />
+  <meta property="og:title" content="MediWise | Premium Healthcare Search" />
+  <meta property="og:description" content="Discover medicines, review treatments, and explore health guidance with MediWise's elegant, mobile-first healthcare experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero-pill.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">MediWise is loading your health experience...</div>
+  </div>
+
+  <div class="page-shell">
+    <header class="site-header" id="siteHeader">
+      <div class="brand-group">
+        <a class="brand-logo" href="index.html">Medi<span>Wise</span></a>
+        <p class="brand-tag">Elegant health insights</p>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="medicine.html">Medicines</a></li>
+          <li><a href="disease.html">Diseases</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-actions">
+        <a href="search.html" class="nav-search" aria-label="Search medicines"><span>Search</span></a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medicine.html">Medicines</a></li>
+        <li><a href="disease.html">Diseases</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section class="hero panel glass-panel">
+        <div class="hero-copy animate-up">
+          <span class="eyebrow">Premium health intelligence</span>
+          <h1>Search medicines and unlock expert care insights.</h1>
+          <p>Discover trusted medicine information, compare treatment options, and get clear guidance with a refined healthcare experience.</p>
+          <div class="hero-actions">
+            <a href="search.html" class="btn btn-primary">Search medicines</a>
+            <a href="compare.html" class="btn btn-secondary">Compare treatments</a>
+          </div>
+          <div class="hero-stats">
+            <div><strong>1.4M</strong><span>Trusted entries</span></div>
+            <div><strong>98%</strong><span>User satisfaction</span></div>
+            <div><strong>860+</strong><span>Medicine profiles</span></div>
+          </div>
+        </div>
+        <div class="hero-visual animate-float">
+          <div class="hero-card glass-card">
+            <span class="pill-badge">Featured</span>
+            <img src="images/placeholder-medicine.svg" alt="MediWise medicine overview" />
+            <div>
+              <h2>Azulpha</h2>
+              <p>Advanced pain relief for everyday comfort.</p>
+            </div>
+          </div>
+          <div class="floating-pill pill-1"></div>
+          <div class="floating-pill pill-2"></div>
+          <div class="floating-pill pill-3"></div>
+          <div class="visual-accent"></div>
+        </div>
+      </section>
+
+      <section class="section section-surface" id="trendingMedicines">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Trending medicines</span>
+            <h2>Explore trusted remedies driving better care.</h2>
+          </div>
+          <a href="medicine.html" class="link-button">View all medicines</a>
+        </div>
+        <div class="card-grid" id="trendingCards"></div>
+      </section>
+
+      <section class="section section-gradient" aria-labelledby="popularCategoriesTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Popular categories</span>
+            <h2 id="popularCategoriesTitle">Find medicines by condition categories.</h2>
+          </div>
+          <a href="search.html" class="link-button">Start searching</a>
+        </div>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="section" aria-labelledby="diseaseInsightsTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Condition intelligence</span>
+            <h2 id="diseaseInsightsTitle">Explore diseases and treatment pathways.</h2>
+          </div>
+        </div>
+        <div class="disease-grid" id="diseaseGrid"></div>
+      </section>
+
+      <section class="section section-surface" aria-labelledby="featuredMedicinesTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Featured remedies</span>
+            <h2 id="featuredMedicinesTitle">Trusted formulas for common symptoms.</h2>
+          </div>
+        </div>
+        <div class="feature-grid" id="featuredGrid"></div>
+      </section>
+
+      <section class="section stats-section" aria-labelledby="healthStatsTitle">
+        <div class="glass-panel stats-panel animate-up">
+          <span class="eyebrow">Health overview</span>
+          <h2 id="healthStatsTitle">Actionable numbers for confident care.</h2>
+          <div class="stats-cards">
+            <div class="stat-card"><strong>4.9</strong><span>Average rating</span></div>
+            <div class="stat-card"><strong>12</strong><span>Categories covered</span></div>
+            <div class="stat-card"><strong>24</strong><span>Trusted experts</span></div>
+            <div class="stat-card"><strong>98%</strong><span>Safety review score</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-gradient" aria-labelledby="whyChooseTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Why MediWise</span>
+            <h2 id="whyChooseTitle">A healthcare experience designed for modern confidence.</h2>
+          </div>
+        </div>
+        <div class="feature-grid feature-grid-4">
+          <article class="glass-card feature-card animate-left">
+            <h3>Clear medicine profiles</h3>
+            <p>Discover side effects, dosages, warnings and alternatives at a glance.</p>
+          </article>
+          <article class="glass-card feature-card animate-up">
+            <h3>Smart comparison</h3>
+            <p>Side-by-side medicine comparisons help you understand treatment choices quickly.</p>
+          </article>
+          <article class="glass-card feature-card animate-right">
+            <h3>Favorites &amp; history</h3>
+            <p>Save reviews and revisit recently viewed medicines with LocalStorage-powered convenience.</p>
+          </article>
+          <article class="glass-card feature-card animate-up">
+            <h3>Premium accessibility</h3>
+            <p>Keyboard-ready interactions, readable typography, and responsive layouts on every device.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-surface faq-section" aria-labelledby="faqTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Frequently asked</span>
+            <h2 id="faqTitle">Health questions answered with clarity.</h2>
+          </div>
+        </div>
+        <div class="faq-grid" id="faqGrid"></div>
+      </section>
+
+      <section class="section newsletter-panel glass-panel animate-up">
+        <div>
+          <span class="eyebrow">Stay informed</span>
+          <h2>Subscribe for curated health updates.</h2>
+          <p>Get weekly insights on conditions, treatments, and medicine guidance.</p>
+          <form id="newsletterForm" class="newsletter-form" novalidate>
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <input id="newsletterEmail" type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="newsletter-note">We never share your information. Read our <a href="privacy.html">privacy policy</a>.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <a class="brand-logo footer-logo" href="index.html">Medi<span>Wise</span></a>
+          <p>Premium medicine discovery built for people who care.</p>
+        </div>
+        <div>
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="compare.html">Compare</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="search.html?category=Painkillers">Painkillers</a></li>
+            <li><a href="search.html?category=Antibiotics">Antibiotics</a></li>
+            <li><a href="search.html?category=Vitamins">Vitamins</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Follow on Twitter">T</a>
+            <a href="#" aria-label="Follow on LinkedIn">L</a>
+            <a href="#" aria-label="Follow on Instagram">I</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 MediWise. Information is for educational purposes only and not medical advice. In emergencies, consult a healthcare professional.</p>
+      </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">↑</button>
+  </div>
+
+  <script src="js/site.js"></script>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/animations.js"></script>
+</body>
+</html>

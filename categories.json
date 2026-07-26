@@ -1,0 +1,10 @@
+﻿[
+  { "name": "Painkillers", "description": "Trusted relief for headaches, cramps, and inflammation." },
+  { "name": "Antibiotics", "description": "Support for bacterial infections and recovery." },
+  { "name": "Vitamins", "description": "Everyday nutrient support for energy and immunity." },
+  { "name": "Diabetes", "description": "Blood sugar management and metabolic care." },
+  { "name": "Heart", "description": "Cardiovascular support and blood pressure clarity." },
+  { "name": "Skin", "description": "Gentle formulas for skin comfort and repair." },
+  { "name": "Children", "description": "Child-friendly options for common pediatric concerns." },
+  { "name": "Allergy", "description": "Allergy symptom relief for daily comfort." }
+]

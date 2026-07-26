@@ -1,0 +1,35 @@
+﻿[
+  {
+    "id": "d-01",
+    "name": "Seasonal Allergy",
+    "summary": "Common allergy symptoms triggered by pollen and environmental irritants.",
+    "symptoms": ["Sneezing", "Runny nose", "Itchy eyes", "Mild congestion"],
+    "causes": ["Pollen exposure", "Dust mites", "Pet dander"],
+    "treatment": "Antihistamines, nasal sprays, and avoidance of triggers.",
+    "homeCare": "Keep windows closed, use air filters, and rinse sinuses regularly.",
+    "emergencySigns": "Severe swelling, difficulty breathing, or chest tightness.",
+    "image": "images/placeholder-disease.svg"
+  },
+  {
+    "id": "d-02",
+    "name": "Tension Headache",
+    "summary": "A headache pattern caused by muscle tension and stress.",
+    "symptoms": ["Dull head pain", "Neck stiffness", "Scalp sensitivity"],
+    "causes": ["Stress", "Poor posture", "Eye strain"],
+    "treatment": "Rest, hydration, gentle massage, and over-the-counter pain relief.",
+    "homeCare": "Practice relaxation exercises, improve ergonomics, and sleep well.",
+    "emergencySigns": "Sudden severe headache or neurological changes.",
+    "image": "images/placeholder-disease.svg"
+  },
+  {
+    "id": "d-03",
+    "name": "Acid Reflux",
+    "summary": "Heartburn and reflux symptoms caused by stomach acid rising into the esophagus.",
+    "symptoms": ["Burning chest pain", "Sour taste", "Regurgitation"],
+    "causes": ["Spicy foods", "Overeating", "Large meals before bedtime"],
+    "treatment": "Diet changes, antacids, and acid reducers.",
+    "homeCare": "Elevate head while sleeping and avoid trigger foods.",
+    "emergencySigns": "Trouble swallowing, chest pain, or weight loss.",
+    "image": "images/placeholder-disease.svg"
+  }
+]

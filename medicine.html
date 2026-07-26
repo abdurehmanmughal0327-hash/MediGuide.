@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicine Details | MediWise</title>
+  <meta name="description" content="Review comprehensive medicine information, dosage details, side effects, interactions, and alternatives with MediWise." />
+  <meta property="og:title" content="Medicine Details | MediWise" />
+  <meta property="og:description" content="Review comprehensive medicine information, dosage details, side effects, interactions, and alternatives with MediWise." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">Preparing medicine details...</div>
+  </div>
+  <div class="page-shell">
+    <header class="site-header" id="siteHeader">
+      <div class="brand-group">
+        <a class="brand-logo" href="index.html">Medi<span>Wise</span></a>
+      </div>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="medicine.html">Medicines</a></li>
+          <li><a href="disease.html">Diseases</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="site-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open mobile menu"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medicine.html">Medicines</a></li>
+        <li><a href="disease.html">Diseases</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <main class="page-content">
+      <section class="section medicine-detail-panel glass-panel animate-up">
+        <div class="detail-header">
+          <div class="detail-image-frame">
+            <img id="medicineImage" src="images/placeholder-medicine.svg" alt="Medicine illustration" />
+            <div class="floating-icon icon-heart"></div>
+          </div>
+          <div class="detail-intro">
+            <span class="eyebrow" id="medicineCategory">Category</span>
+            <h1 id="medicineTitle">Medicine name</h1>
+            <p id="medicineSubtitle">Support headline with trusted medicine summary.</p>
+            <div class="pill-metadata">
+              <div><strong>Brand</strong><span id="medicineBrand"></span></div>
+              <div><strong>Manufacturer</strong><span id="medicineManufacturer"></span></div>
+              <div><strong>Generic</strong><span id="medicineGeneric"></span></div>
+            </div>
+            <div class="detail-actions">
+              <button id="favoriteButton" class="btn btn-secondary">Add to favorites</button>
+              <a href="compare.html" class="btn btn-primary">Compare this medicine</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-surface medicine-grid">
+        <article class="medicine-card glass-card animate-left">
+          <h2>Uses</h2>
+          <p id="medicineUses"></p>
+        </article>
+        <article class="medicine-card glass-card animate-up">
+          <h2>How it works</h2>
+          <p id="medicineHowItWorks"></p>
+        </article>
+        <article class="medicine-card glass-card animate-right">
+          <h2>Dosage</h2>
+          <p id="medicineDosage"></p>
+        </article>
+        <article class="medicine-card glass-card animate-left">
+          <h2>Before &amp; after food</h2>
+          <p><strong>Before:</strong> <span id="medicineBeforeFood"></span></p>
+          <p><strong>After:</strong> <span id="medicineAfterFood"></span></p>
+        </article>
+        <article class="medicine-card glass-card animate-up">
+          <h2>Side effects</h2>
+          <p id="medicineSideEffects"></p>
+        </article>
+        <article class="medicine-card glass-card animate-right">
+          <h2>Warnings</h2>
+          <p id="medicineWarnings"></p>
+        </article>
+      </section>
+
+      <section class="section section-gradient medicine-detail-grid">
+        <div class="detail-panel glass-card animate-up">
+          <h2>Pregnancy</h2>
+          <p id="medicinePregnancy"></p>
+        </div>
+        <div class="detail-panel glass-card animate-up">
+          <h2>Breastfeeding</h2>
+          <p id="medicineBreastfeeding"></p>
+        </div>
+        <div class="detail-panel glass-card animate-up">
+          <h2>Children</h2>
+          <p id="medicineChildren"></p>
+        </div>
+        <div class="detail-panel glass-card animate-up">
+          <h2>Storage</h2>
+          <p id="medicineStorage"></p>
+        </div>
+      </section>
+
+      <section class="section section-surface medicine-additional">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Prescriptions &amp; safety</span>
+            <h2>Complete medicine context to support safe use.</h2>
+          </div>
+        </div>
+        <div class="accordion" id="detailAccordion"></div>
+      </section>
+
+      <section class="section featured-list" aria-labelledby="relatedMedicinesTitle">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Alternative solutions</span>
+            <h2 id="relatedMedicinesTitle">Medicines commonly reviewed together.</h2>
+          </div>
+        </div>
+        <div class="card-grid" id="relatedCards"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <a class="brand-logo footer-logo" href="index.html">Medi<span>Wise</span></a>
+          <p>Premium medicine discovery built for people who care.</p>
+        </div>
+        <div>
+          <h3>Quick links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 MediWise. Use information responsibly and consult healthcare professionals for diagnosis.</p>
+      </div>
+    </footer>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+  <script src="js/site.js"></script>
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/medicine.js"></script>
+</body>
+</html>

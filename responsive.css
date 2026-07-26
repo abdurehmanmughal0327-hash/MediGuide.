@@ -1,0 +1,28 @@
+﻿@media (max-width: 620px) {
+  .site-header,
+  .page-shell {
+    padding: 0;
+  }
+  .brand-tag {
+    display: none;
+  }
+  .section {
+    padding: 24px 16px;
+  }
+  .hero-copy h1 {
+    font-size: 2.2rem;
+  }
+  .stats-cards,
+  .feature-grid,
+  .category-grid,
+  .disease-grid,
+  .faq-grid,
+  .history-grid,
+  .feature-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .mobile-menu {
+    width: calc(100vw - 24px);
+    margin: 0 auto;
+  }
+}
