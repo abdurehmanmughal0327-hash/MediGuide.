@@ -1,0 +1,56 @@
+﻿.animate-up,
+.animate-left,
+.animate-right,
+.animate-float,
+.animate-scale {
+  opacity: 0;
+  transform: translateY(24px);
+  animation-fill-mode: forwards;
+}
+
+.animate-up { animation: fadeUp 0.85s ease forwards; }
+.animate-left { animation: fadeLeft 0.9s ease forwards; }
+.animate-right { animation: fadeRight 0.9s ease forwards; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-scale { animation: zoomIn 0.9s ease forwards; }
+
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes ripple {
+  from { transform: scale(0.9); opacity: 0.7; }
+  to { transform: scale(1.15); opacity: 0; }
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.24);
+  outline-offset: 4px;
+}
